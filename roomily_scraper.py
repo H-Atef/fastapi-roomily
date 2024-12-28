@@ -73,7 +73,7 @@ class PropertyScraper:
             properties_list = [{
                 'id': data.get('id', '-'),
                 'title': data.get('title', '-'),
-                'lowestPrice': data.get('lowestPriceInfo', {}).get('display', '-'),
+                'price': data.get('lowestPriceInfo', {}).get('display', '-'),
                 'location': data.get('locationTrailHeader', '-'),
                 'geoLocation': data.get('geoLocation', '-'),
                 'imageLinks': data.get('imageLinks', {}).get('medium', '-'),

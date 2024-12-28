@@ -16,7 +16,7 @@ class PropertyCache(Base):
 
     id = Column(String(255), primary_key=True)
     title = Column(Text)
-    lowestPrice = Column(Text)
+    price = Column(Text)
     location = Column(Text)
     geoLocation = Column(JSON)
     imageLinks = Column(Text)
@@ -60,7 +60,7 @@ class CacheManager:
                 cached_data = [{
                 'id': prop.id,
                 'title': prop.title,
-                'lowestPrice': prop.lowestPrice,
+                'price': prop.price,
                 'location': prop.location,
                 'geoLocation': prop.geoLocation,
                 'imageLinks': prop.imageLinks,
@@ -88,7 +88,7 @@ class CacheManager:
                 cached_property = PropertyCache(
                     id=prop['id'],
                     title=prop['title'],
-                    lowestPrice=prop['lowestPrice'],
+                    price=prop['price'],
                     location=prop['location'],
                     geoLocation=prop['geoLocation'],
                     imageLinks=prop['imageLinks'],
